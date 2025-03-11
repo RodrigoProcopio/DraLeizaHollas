@@ -1,0 +1,1223 @@
+/* Reset básico */
+* {
+    margin: 0; /* Remove margens padrão */
+    padding: 0; /* Remove preenchimentos padrão */
+    box-sizing: border-box; /* Garante que padding e bordas não afetem o tamanho total dos elementos */
+}
+
+/* Fundo do site */
+body {
+    font-family: Arial, sans-serif; /* Define a fonte padrão */
+    line-height: 1.6; /* Espaçamento entre linhas */
+    color: #333; /* Cor do texto */
+    background-image: url('../images/background.png'); /* Imagem de fundo */
+    background-size: cover; /* Faz a imagem cobrir toda a área */
+    background-position: center; /* Centraliza a imagem */
+    background-attachment: fixed; /* Fixa a imagem ao rolar a página */
+    background-repeat: no-repeat; /* Evita repetição da imagem */
+    margin: 0;
+    padding: 0;
+}
+
+/* Overlay escuro para melhorar a legibilidade do conteúdo */
+body::before {
+    content: '';
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.1); /* Overlay preto com 10% de opacidade */
+    z-index: -1; /* Coloca o overlay atrás do conteúdo */
+}
+
+/* Ajustes para o conteúdo ficar acima do overlay */
+header, section, footer {
+    position: relative;
+    z-index: 1; /* Garante que o conteúdo fique acima do overlay */
+}
+
+/* Estilos para o cabeçalho */
+header {
+    background: rgba(0, 77, 64, 0.8); /* Verde Escuro com transparência */
+    color: #fff; /* Cor do texto */
+    padding: 20px 0; /* Aumentei o padding para 20px no topo e na base */
+    text-align: center; /* Centraliza o texto */
+    position: relative; /* Permite posicionar elementos filhos de forma absoluta */
+}
+
+/* Estilos para a lista de navegação */
+nav ul {
+    list-style: none; /* Remove marcadores de lista */
+    padding: 0;
+    margin: 0;
+}
+
+/* Estilos para os itens da lista de navegação */
+nav ul li {
+    display: inline-block; /* Exibe os itens em linha */
+    margin: 0 15px; /* Espaçamento entre os itens */
+}
+
+/* Estilos para os links da navegação */
+nav ul li a {
+    color: #fff; /* Cor do texto */
+    text-decoration: none; /* Remove sublinhado */
+    font-weight: bold; /* Texto em negrito */
+    font-size: 1.2em; /* Aumentei o tamanho da fonte */
+    padding: 8px 12px; /* Espaçamento interno */
+    border-radius: 5px; /* Bordas arredondadas */
+    transition: all 0.3s ease; /* Transição suave para o efeito de hover */
+}
+
+/* Efeito de hover nos links da navegação */
+nav ul li a:hover {
+    color: #004D40; /* Cor do texto no hover */
+    background-color: #fff; /* Fundo branco no hover */
+}
+
+/* Estilos para o botão "Acessar Área do Paciente" */
+.patient-area-button {
+    position: absolute; /* Posiciona o botão de forma absoluta */
+    top: 10px; /* Distância do topo (ajustado para o novo padding) */
+    right: 280px; /* Distância da direita */
+}
+
+/* Estilos para o botão Area do Paciente */
+.cta-button {
+    background: #fff; /* Fundo branco */
+    color: #004D40; /* Cor do texto */
+    padding: 10px 20px; /* Espaçamento interno */
+    text-decoration: none; /* Remove sublinhado */
+    border-radius: 5px; /* Bordas arredondadas */
+    font-weight: bold; /* Texto em negrito */
+    border: 2px solid #004D40; /* Borda Verde Escuro */
+    display: block; /* Faz o botão ocupar a largura total do contêiner */
+    margin: 0 auto; /* Centraliza o botão horizontalmente */
+    width: fit-content; /* Ajusta a largura ao conteúdo do botão */
+}
+
+/* Efeito de hover no botão Area do Paciente */
+.cta-button:hover {
+    background: #004D40; /* Fundo Verde Escuro no hover */
+    color: #fff; /* Cor do texto no hover */
+}
+
+/* Estilos para o botão de Saiba Mais */
+.cta-button1 {
+    background: #004D40; /* Fundo branco */
+    color: #fff; /* Cor do texto */
+    padding: 8px 16px; /* Reduz o padding */
+    text-decoration: none; /* Remove sublinhado */
+    border-radius: 5px; /* Bordas arredondadas */
+    font-weight: bold; /* Texto em negrito */
+    font-size: 0.9em; /* Reduz o tamanho da fonte  */
+    border: 2px solid #004D40; /* Borda Verde Escuro */
+    display: block; /* Faz o botão ocupar a largura total do contêiner */
+    margin: 0 auto; /* Centraliza o botão horizontalmente */
+    width: fit-content; /* Ajusta a largura ao conteúdo do botão */
+}
+
+/* Efeito de hover no botão Saiba Mais  */
+.cta-button1:hover {
+    background: #a2dce0; /* Fundo Verde Escuro no hover */
+    color: #004D40; /* Cor do texto no hover */
+}
+
+/* Estilos para a seção hero (destaque) */
+.hero {
+    margin: 0 auto;
+    padding: 20px;
+    background: rgba(202, 202, 202, 0.5); /* Fundo branco com transparência */
+    background-image: url('../images/heart.png'); /* Imagem de fundo */
+    background-size: 70% auto; /* 30% da largura do elemento, altura automática */
+    background-position: right center; /* Posiciona à direita e centralizada verticalmente */
+    background-repeat: no-repeat; /* Evita repetição */
+    background-blend-mode: overlay; /* Combina a imagem com o fundo */
+    border-radius: 10px; /* Bordas arredondadas */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Sombra suave */
+    margin-bottom: 30px;
+    margin-top: 30px;
+    max-width: 1000px; /* Largura máxima */
+}
+
+.hero-content {
+    display: flex; /* Layout flexível para alinhar texto e imagem */
+    align-items: center; /* Centraliza os itens verticalmente */
+    gap: 40px; /* Espaçamento entre o texto e a imagem */
+}
+
+.hero-text {
+    flex: 1; /* Ocupa o espaço restante */
+    background: rgba(255, 255, 255, 0.479); /* Fundo branco com transparência */
+    padding: 20px;
+    border-radius: 10px; /* Bordas arredondadas */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Sombra suave */
+    order: 2; /* Coloca o texto à direita */
+}
+
+.hero-text h1 {
+    font-size: 2.4em;
+    color: #004D40; /* Verde Escuro */
+    margin-bottom: 1px;
+    text-align: center; /* Alinha o texto ao centro */
+}
+
+.hero-text h2 {
+    font-size: 1.5em;
+    color: #004D40;
+    margin-bottom: 1px;
+    text-align: center; /* Alinha o texto ao centro */
+}
+
+.hero-text p {
+    font-size: 1.5em;
+    color: #333;
+    margin-bottom: 5px;
+    text-align: center; /* Alinha o texto ao centro */
+}
+
+.hero-image {
+    order: 1; /* Coloca a imagem à esquerda */
+}
+
+.hero-image img {
+    max-width: 420px; /* Largura máxima da imagem */
+    height: auto; /* Mantém a proporção da imagem */
+}
+
+/* Estilos para o rodapé */
+footer {
+    background: rgba(0, 77, 64, 0.8); /* Verde Escuro com transparência */
+    color: #fff; /* Cor do texto */
+    text-align: center; /* Centraliza o texto */
+    padding: 20px 0; /* Espaçamento interno */
+    margin-top: 20px; /* Espaçamento acima do rodapé */
+}
+
+/* Estilos para o formulário de login */
+form {
+    max-width: 400px; /* Largura máxima */
+    margin: 20px auto; /* Centraliza o formulário */
+    padding: 20px; /* Espaçamento interno */
+    border: 1px solid #004D40; /* Borda Verde Escuro */
+    border-radius: 5px; /* Bordas arredondadas */
+    background-color: rgba(255, 255, 255, 0.9); /* Fundo branco com transparência */
+    text-align: center; /* Centraliza o conteúdo */
+}
+
+/* Estilos para os campos de entrada e botão do formulário */
+form input, form textarea, form button {
+    width: 100%; /* Largura total */
+    padding: 10px; /* Espaçamento interno */
+    margin-bottom: 10px; /* Espaçamento abaixo */
+    border: 1px solid #004D40; /* Borda Verde Escuro */
+    border-radius: 5px; /* Bordas arredondadas */
+}
+
+/* Estilos para o botão do formulário */
+form button {
+    background: #004D40; /* Fundo Verde Escuro */
+    color: #fff; /* Cor do texto */
+    border: none; /* Remove borda */
+    cursor: pointer; /* Cursor de ponteiro */
+    font-weight: bold; /* Texto em negrito */
+}
+
+/* Efeito de hover no botão do formulário */
+form button:hover {
+    background: #00332B; /* Fundo Verde Escuro mais escuro no hover */
+}
+
+/* Estilos para o link "Esqueci minha senha" */
+.forgot-password {
+    display: block; /* Exibe o link como bloco */
+    text-align: center; /* Centraliza o texto */
+    margin-top: 10px; /* Espaçamento acima */
+    color: #004D40; /* Cor do texto */
+    text-decoration: none; /* Remove sublinhado */
+    font-size: 0.9em; /* Tamanho da fonte */
+}
+
+/* Efeito de hover no link "Esqueci minha senha" */
+.forgot-password:hover {
+    color: #00332B; /* Cor do texto no hover */
+    text-decoration: underline; /* Adiciona sublinhado no hover */
+}
+
+/* Estilos para a seção "Sobre" */
+.about {
+    background: rgba(255, 255, 255, 0.5); /* Fundo branco com transparência */
+    padding: 40px 20px;
+    margin: 20px auto;
+    max-width: 1000px; /* Largura máxima */
+    border-radius: 10px; /* Bordas arredondadas */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Sombra suave */
+}
+
+.about-content {
+    display: flex; /* Layout flexível para alinhar imagem e texto */
+    align-items: flex-start; /* Alinha os itens ao topo */
+    gap: 40px; /* Espaçamento entre a imagem e o texto */
+}
+
+.about-text {
+    flex: 1; /* Ocupa o espaço restante */
+    background: rgba(255, 255, 255, 0.9); /* Fundo branco com transparência */
+    padding: 20px;
+    border-radius: 10px; /* Bordas arredondadas */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Sombra suave */
+}
+
+.about-text p {
+    text-align: justify; /* Texto justificado */
+    font-size: 1.1em;
+    line-height: 1.8;
+    color: #333;
+    margin-bottom: 15px;
+}
+
+.about-image img {
+    max-width: 300px; /* Largura máxima da imagem */
+    height: auto; /* Mantém a proporção da imagem */
+    border-radius: 10px; /* Bordas arredondadas */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Sombra suave */
+}
+
+.about h1 {
+    font-size: 2.5em;
+    color: #004D40; /* Verde Escuro */
+    margin-bottom: 20px;
+}
+
+.about h2 {
+    font-size: 1.8em;
+    color: #004D40; /* Verde Escuro */
+    margin-bottom: 10px;
+}
+
+/* Estilos para o seletor de idioma */
+.language-selector {
+    position: absolute;
+    top: 20px; /* Distância do topo */
+    right: 50px; /* Distância da direita */
+    z-index: 1000; /* Garante que o dropdown fique acima de outros elementos */
+}
+
+.language-button {
+    padding: 8px 36px; /* Aumentei o padding horizontal para dar mais espaço */
+    border-radius: 5px;
+    border: 2px solid #004D40;
+    background-color: rgba(0, 77, 64, 0.8);
+    color: #fff;
+    font-weight: bold;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    display: flex;
+    align-items: center; /* Centraliza os itens verticalmente */
+    gap: 8px; /* Espaçamento entre a bandeira e o texto */
+    min-width: 120px; /* Largura mínima para acomodar o conteúdo */
+}
+
+.language-button:hover {
+    background-color: #fff;
+    color: rgba(0, 77, 64, 0.8);
+}
+
+.language-dropdown {
+    display: none; /* Esconde o dropdown inicialmente */
+    position: absolute;
+    background-color: #fff;
+    border: 1px solid #004D40;
+    border-radius: 5px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    z-index: 1;
+    margin-top: 5px; /* Espaçamento entre o botão e o dropdown */
+    right: 0; /* Alinha o dropdown à direita */
+    min-width: 120px; /* Largura mínima para o dropdown */
+}
+
+.language-dropdown a {
+    display: flex; /* Alinha a bandeira e o texto horizontalmente */
+    align-items: center; /* Centraliza os itens verticalmente */
+    gap: 8px; /* Espaçamento entre a bandeira e o texto */
+    padding: 8px 12px;
+    color: #004D40;
+    text-decoration: none;
+    transition: all 0.3s ease;
+}
+
+.language-dropdown a:hover {
+    background-color: #004D40;
+    color: #fff;
+}
+
+/* Mostrar o dropdown ao passar o mouse ou clicar */
+.language-selector:hover .language-dropdown,
+.language-selector:focus-within .language-dropdown {
+    display: block;
+}
+
+/* Estilos para o slide de imagens */
+.image-slider {
+    position: relative; /* Permite que os botões sejam posicionados em relação a este contêiner */
+    max-width: 800px; /* Largura máxima do slider */
+    margin: 20px auto;
+    overflow: hidden; /* Esconde as imagens que estão fora do contêiner */
+    text-align: center;
+}
+
+.slider-container {
+    width: 100%;
+    overflow: hidden; /* Esconde as imagens que estão fora do contêiner */
+    position: relative; /* Adicione isso para garantir que os botões fiquem acima */
+}
+
+.slider {
+    display: flex;
+    transition: transform 0.5s ease-in-out; /* Animação suave ao mudar de slide */
+}
+
+.slider a {
+    flex: 0 0 100%; /* Cada imagem ocupa 100% da largura do contêiner */
+    width: 100%;
+    box-sizing: border-box;
+}
+
+.slider img {
+    width: 100%;
+    aspect-ratio: 16 / 9; /* Proporção 16:9 */
+    object-fit: cover; /* Garante que a imagem cubra o espaço sem distorcer */
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* Botões de navegação */
+.prev, .next {
+    position: absolute;
+    top: 50%; /* Centraliza verticalmente */
+    transform: translateY(-50%); /* Ajusta o posicionamento vertical */
+    background-color: #fff;
+    color: rgba(0, 77, 64, 0.8);
+    border: none;
+    padding: 10px;
+    cursor: pointer;
+    border-radius: 50%;
+    font-size: 18px;
+    z-index: 100; /* Garante que os botões fiquem acima das imagens */
+}
+
+.prev {
+    left: 10px; /* Posiciona à esquerda */
+}
+
+.next {
+    right: 10px; /* Posiciona à direita */
+}
+
+.prev:hover, .next:hover {
+    background-color: rgba(0, 77, 64, 1);
+}
+
+/* Seção de Artigos */
+.articles {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 20px;
+    background: rgba(255, 255, 255, 0.5); /* Fundo branco com transparência */
+    border-radius: 10px; /* Bordas arredondadas */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Sombra suave */
+}
+
+.articles h1 {
+    font-size: 2em;
+    margin-bottom: 20px;
+    color: #004D40;
+    text-align: center;
+}
+
+.article-card {
+    margin-bottom: 30px;
+    padding: 20px;
+    background: rgba(255, 255, 255, 0.5); /* Fundo branco com transparência */
+    border-radius: 10px; /* Bordas arredondadas */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Sombra suave */
+}
+
+.article-card .publication-date {
+    font-size: 1em;
+    color: #fff;
+    margin-bottom: 15px;
+}
+
+.article-card .article-content {
+    padding: 20px;
+    font-size: 1em;
+    line-height: 1.6;
+    color: #004D40;
+    text-align: justify;
+}
+
+.article-card footer .read-more i {
+    margin-left: 5px;
+    transition: transform 0.3s ease;
+}
+
+.article-card footer .read-more:hover i {
+    transform: translateX(5px);
+}
+
+/* Estilos para o header dos artigos */
+.article-card header {
+    background-color: #004D40; 
+    padding: 15px;
+    border-radius: 8px 8px 0 0; /* Bordas arredondadas apenas no topo */
+}
+
+.article-card header h2 {
+    color: #fff; /* Texto branco */
+    font-size: 1.5em;
+    margin-bottom: 10px;
+}
+
+.article-card header .publication-date {
+    color: #e0e0e0; 
+    font-size: 1.5em;
+}
+
+/* Estilos para o footer dos artigos */
+.article-card footer {
+    background-color:#004D40; 
+    padding: 15px;
+    border-radius: 0 0 8px 8px; /* Bordas arredondadas apenas na base */
+    text-align: right; /* Alinha o botão "Leia mais" à direita */
+}
+
+.article-card footer .read-more {
+    display: inline-block;
+    padding: 8px 16px;
+    background-color: #007bff; /* Azul */
+    color: #fff; /* Texto branco */
+    text-decoration: none;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+}
+
+.article-card footer .read-more:hover {
+    background-color: #0056b3; /* Azul mais escuro no hover */
+}
+
+.article-card footer .read-more i {
+    margin-left: 5px;
+    transition: transform 0.3s ease;
+}
+
+.article-card footer .read-more:hover i {
+    transform: translateX(5px); /* Efeito de movimento no ícone */
+}
+
+.contact {
+    font-size: 1.1em;
+    text-align: center; /* Centraliza o texto horizontalmente */
+    color: #004D40;
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 20px;
+    background: rgba(255, 255, 255, 0.5); /* Fundo branco com transparência */
+    border-radius: 10px; /* Bordas arredondadas */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Sombra suave */
+    margin-bottom: 20px;
+    margin-top: 20px;
+    background-image: url('../images/heart.png'); /* Imagem de fundo */
+    background-size: 100% auto; /* 30% da largura do elemento, altura automática */
+    background-position: right center; /* Posiciona à direita e centralizada verticalmente */
+    background-repeat: no-repeat; /* Evita repetição */
+    background-blend-mode: overlay; /* Combina a imagem com o fundo */
+}
+
+.contact-info {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 20px;
+    background: rgba(255, 255, 255, 0.5); /* Fundo branco com transparência */
+    border-radius: 10px; /* Bordas arredondadas */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Sombra suave */
+    text-align: left; 
+    margin-bottom: 20px;
+    margin-top: 20px;
+}
+
+.contact-info h2 {
+    margin-bottom: 15px;
+    color: #004D40;
+}
+
+.contact-info p {
+    margin: 10px 0;
+    color: #004D40;
+}
+
+.contact-info i {
+    margin-right: 10px;
+    color: #004D40;
+}
+
+.contact-form {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 20px;
+    background: rgba(255, 255, 255, 0.5); /* Fundo branco com transparência */
+    border-radius: 10px; /* Bordas arredondadas */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Sombra suave */
+}
+
+.contact-form h2 {
+    margin-bottom: 20px;
+    color: #004D40;
+}
+
+.form-group {
+    margin-bottom: 15px;; 
+}
+
+.form-group input,
+.form-group textarea {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #004D40;
+    border-radius: 4px;
+    font-size: 16px;
+}
+
+.form-group textarea {
+    resize: vertical;
+    height: 150px;
+}
+
+button[type="submit"] {
+    background-color: #004D40;
+    color: #fff;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+button[type="submit"]:hover {
+    color: #004D40; /* Cor do texto no hover */
+    background-color: #64998d;
+}
+
+/* Estilos para a seção Área do Paciente */
+.patient-area {
+    font-size: 1.1em;
+    text-align: center; /* Centraliza o texto horizontalmente */
+    color: #004D40;
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 20px;
+    background: rgba(255, 255, 255, 0.5); /* Fundo branco com transparência */
+    border-radius: 10px; /* Bordas arredondadas */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Sombra suave */
+    margin-bottom: 20px;
+    margin-top: 20px;
+    background-image: url('../images/heart.png'); /* Imagem de fundo */
+    background-size: 70% auto; /* 30% da largura do elemento, altura automática */
+    background-position: center; /* Posiciona à direita e centralizada verticalmente */
+    background-repeat: no-repeat; /* Evita repetição */
+    background-blend-mode: overlay; /* Combina a imagem com o fundo */
+}
+
+/* Estilo para o título */
+.patient-area h1 {
+    font-size: 2.5rem; /* Tamanho da fonte */
+    color:  #004D40; /* Cor do texto */
+    margin-bottom: 15px; /* Espaçamento inferior */
+    font-weight: 600; /* Peso da fonte (negrito) */
+}
+
+/* Estilo para o parágrafo */
+.patient-area p {
+    font-size: 1.2rem; /* Tamanho da fonte */
+    color:  #004D40; /* Cor do texto */
+    margin-bottom: 30px; /* Espaçamento inferior */
+}
+
+#feedbackMessage {
+    display: none;
+    margin-bottom: 20px;
+    padding: 15px;
+    border-radius: 5px;
+    font-size: 1rem;
+    text-align: center;
+}
+
+#feedbackMessage.success {
+    background-color: #d4edda;
+    color: #155724;
+    border: 1px solid #c3e6cb;
+}
+
+#feedbackMessage.error {
+    background-color: #f8d7da;
+    color: #721c24;
+    border: 1px solid #f5c6cb;
+}
+
+/* Estilos do sistema */
+
+/* Estilo para o conteúdo da página */
+
+
+/* Estilo das seções */
+.intButtons, .srchItem {
+    padding: 30px;
+    color: white;
+    text-align: center;
+}
+
+.newItem {
+    display: none; /* Oculta a seção de novo item por padrão */
+    padding: 30px;
+    color: white;
+    text-align: center;
+}
+
+
+.searchBox input[type="text"] {
+    margin: 0;
+    border: 1px solid rgb(4, 105, 108);
+    width: 15%;
+    padding: 10px;
+    text-align: center;
+    font-size: 16px;
+}
+
+/* Estilo dos botões */
+.Btn {
+    padding: 9px 10px;
+    background-color: rgb(4, 105, 108);
+    color: white;
+    font-size: 16px;
+    cursor: pointer;
+    transition: 0.3s;
+    border-radius: 2px;
+    margin-right: 10px;
+}
+
+.Btn:hover {
+    background-color: #15a526; 
+}
+
+/* Estilo da tabela */
+table {
+    border: 1px solid rgb(4, 105, 108);
+    border-collapse: collapse;
+    font-size: 12px;
+    transition: 0.2s;
+    text-align: center;
+    font-family: tahoma;
+    background-color: white;
+    margin: 0 auto;
+    width: 80%;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    padding: 10px;
+}
+
+th, td {
+    border: 1px solid rgb(4, 105, 108);
+    padding: 5px;
+    font-size: 14px;
+}
+
+tr:nth-child(odd) {
+    background-color: #74ccbd; 
+}
+
+th:nth-child(1) {
+    width: 50%;
+}
+
+tr:hover {
+    background: rgb(114, 187, 198); 
+}
+
+/* Estilo do botão de fechar */
+.close {
+    background-color: #f38b8b;
+    border-color: #f38b8b;
+    color: #ffffff;
+    cursor: pointer;
+    font-size: 10px;
+    font-weight: bolder;
+}
+
+.close:hover {
+    color: #ff0202;
+    font-weight: bolder;
+}
+
+
+/* Estilo da tabela de consultas agendadas */
+#consultTable {
+    border: 1px solid rgb(4, 105, 108);
+    border-collapse: collapse;
+    font-size: 12px;
+    transition: 0.2s;
+    text-align: center;
+    font-family: tahoma;
+    background-color: white;
+    margin: 0 auto;
+    width: 80%;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    padding: 5px;
+}
+
+#consultTable th:first-child { /* Coluna Id) */
+    width: 5%; 
+}
+
+#consultTable td:nth-child(2) { /* Coluna Médico(a) */
+    width: 25%; 
+}
+
+#consultTable td:nth-child(3) { /* Coluna Especialidade */
+    width: 25%; 
+}
+
+#consultTable td:nth-child(4) { /* Coluna Data */
+    width: 10%; 
+}
+
+#consultTable td:nth-child(5) { /* Coluna Hora */
+    width: 10%; /
+}
+
+#consultTable td:nth-child(6) { /* Coluna Editar */
+    width: 5%; 
+}
+
+#consultTable td:nth-child(7) { /* Coluna Cancelar */
+    width: 5%; 
+}
+
+#consultTable td:nth-child(8) { /* Coluna Google Agenda*/
+    width: 5%; 
+}
+.centered {
+    text-align: center;
+    margin: 0 auto;
+    width: 60%; 
+}
+
+
+/* Estilo do botão de cancelar consulta */
+.cancelar {
+    background-color: #f38b8b;
+    border-color: #f38b8b;
+    color: #ffffff;
+    cursor: pointer;
+    font-size: 10px;
+    font-weight: bolder;
+}
+
+.cancelar:hover {
+    color: #ff0202;
+    font-weight: bolder;
+}
+
+/* Estilo do botão de editar consulta */
+.editar {
+    background-color: #e28e5e;
+    border-color: #e28e5e;
+    color: #ffffff;
+    cursor: pointer;
+    font-size: 10px;
+    font-weight: bolder;
+}
+
+.editar:hover {
+    color: #ec4921;
+    font-weight: bolder;
+}
+
+
+#cancelEditConsultButton {
+    background-color: #f38b8b;
+    border-color: #f38b8b;
+    color: #ffffff;
+    cursor: pointer;
+    font-size: 10px;
+    font-weight: bolder;
+    padding: 9px 10px;
+    transition: background-color 0.3s, color 0.3s; 
+}
+
+#cancelEditConsultButton:hover {
+    color: #ff0202;
+    font-weight: bolder;
+}
+
+
+.editar {
+    background-color: #e28e5e;
+    border-color: #e28e5e;
+    color: #ffffff;
+    cursor: pointer;
+    font-size: 10px;
+    font-weight: bolder;
+}
+
+.editar:hover {
+    color: #ec4921;
+    font-weight: bolder;
+}
+
+#cancelEditConsultButton {
+    background-color: #e28e5e;
+    border-color: #e28e5e;
+    color: #ffffff;
+    cursor: pointer;
+    font-size: 16px;
+    font-weight: bolder;
+    transition: 0.3s; 
+}
+
+#cancelEditConsultButton:hover {
+    background-color: #ec4921;
+    color: #ffffff;
+    font-weight: bolder;
+}
+
+#editConsultButton {
+    background-color: rgb(4, 105, 108);
+    border-color: rgb(4, 105, 108);
+    color: #ffffff;
+    cursor: pointer;
+    font-size: 16px;
+    font-weight: bolder;
+    padding: 9px 10px; 
+    transition: background-color 0.3s, color 0.3s; 
+}
+
+#editConsultButton:hover {
+    background-color: #15a526;
+    color: #ffffff;
+}
+
+/* Oculta visualmente a coluna do ID na tabela de consultas */
+#consultTable th:first-child,
+#consultTable td:first-child {
+    display: none;
+}
+
+/* Estilo botão de Login */
+#loginButton {
+    padding: 9px 10px;
+    background-color: rgb(39, 170, 61);
+    border-color: rgb(39, 170, 61);
+    color: #ffffff;
+    font-size: 16px;
+    cursor: pointer;
+    transition: 0.3s;
+    border-radius: 2px;
+    text-align: center;
+}
+
+#loginButton:hover {
+    background-color: #5df16e;
+    color: white;
+}
+
+.container {
+    text-align: center; /* Centraliza o conteúdo dentro do container */
+}
+
+/* Estilo botão de Logout */
+#logoutButton {
+    padding: 9px 10px;
+    background-color: #ff6347;
+    border-color: #ff6347;
+    color: #ffffff;
+    font-size: 16px;
+    cursor: pointer;
+    transition: 0.3s;
+    border-radius: 2px;
+    margin-top: 5px; 
+    margin-right: 10px;
+    float: right;
+
+}
+
+#logoutButton:hover {
+    background-color: red;
+    color: white;
+}
+
+/* Estilo do botão de Agenda */
+.agnd {
+    background-color: #014cad;
+    border-color:  #014cad;
+    color: #ffffff;
+    cursor: pointer;
+    font-size: 10px;
+    font-weight: bolder;
+}
+
+.agnd:hover {
+    background-color: #257ae9;
+    border-color: #257ae9;
+    font-weight: bolder;
+}
+
+/* Estilos para a seção Área do Paciente */
+
+.password-reset {
+    font-size: 1.1em;
+    text-align: center; /* Centraliza o texto horizontalmente */
+    color: #004D40;
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 20px;
+    background: rgba(255, 255, 255, 0.5); /* Fundo branco com transparência */
+    border-radius: 10px; /* Bordas arredondadas */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Sombra suave */
+    margin-bottom: 20px;
+    margin-top: 20px;
+    background-image: url('../images/heart.png'); /* Imagem de fundo */
+    background-size: 70% auto; /* 30% da largura do elemento, altura automática */
+    background-position: center; /* Posiciona à direita e centralizada verticalmente */
+    background-repeat: no-repeat; /* Evita repetição */
+    background-blend-mode: overlay; /* Combina a imagem com o fundo */
+}
+
+.resetPasswordForm {
+    max-width: 400px; /* Largura máxima */
+    margin: 20px auto; /* Centraliza o formulário */
+    padding: 20px; /* Espaçamento interno */
+    border: 1px solid #004D40; /* Borda Verde Escuro */
+    border-radius: 5px; /* Bordas arredondadas */
+    background-color: rgba(255, 255, 255, 0.9); /* Fundo branco com transparência */
+    text-align: center; /* Centraliza o conteúdo */
+}
+
+/* Estilização para os inputs e botões */
+#searchBox,
+.newItem {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px; /* Espaço entre os elementos */
+    justify-content: center; /* Centraliza os elementos */
+    align-items: center; /* Alinha verticalmente */
+}
+
+/* Inputs */
+input {
+    min-width: 200px; /* Define um tamanho mínimo */
+    padding: 10px; /* Espaçamento interno */
+    font-size: 16px; /* Tamanho da fonte */
+    border: 1px solid #004D40; /* Borda combinando com o estilo do site */
+    border-radius: 5px; /* Cantos arredondados */
+    background: rgba(255, 255, 255, 0.9); /* Fundo branco com leve transparência */
+    color: #333; /* Cor do texto */
+}
+
+/* Placeholder estilizado */
+input::placeholder {
+    color: rgba(51, 51, 51, 0.6); /* Cor do placeholder */
+}
+
+/* Botões */
+.Btn {
+    padding: 10px 20px; /* Ajuste do tamanho do botão */
+    font-size: 16px;
+    background-color: #004D40; /* Verde escuro */
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    min-width: 120px; /* Define um tamanho mínimo para os botões */
+    font-weight: bold;
+    transition: background 0.3s ease;
+}
+
+/* Efeito hover no botão */
+.Btn:hover {
+    background-color: #00332B;
+}
+
+/* Responsividade */
+@media (max-width: 600px) {
+    #searchBox,
+    .newItem {
+        flex-direction: column;
+    }
+
+    input,
+    .Btn {
+        width: 100%;
+    }
+}
+
+.centered-text {
+    font-size: 1.5em;
+    text-align: center; /* Centraliza o texto horizontalmente */
+    color: #004D40;
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 20px;
+    background: rgba(255, 255, 255, 0.5); /* Fundo branco com transparência */
+    border-radius: 10px; /* Bordas arredondadas */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Sombra suave */
+    margin-bottom: 20px;
+    margin-top: 20px;
+    background-image: url('../images/heart.png'); /* Imagem de fundo */
+    background-size: 70% auto; /* 30% da largura do elemento, altura automática */
+    background-position: center; /* Posiciona à direita e centralizada verticalmente */
+    background-repeat: no-repeat; /* Evita repetição */
+    background-blend-mode: overlay; /* Combina a imagem com o fundo */
+}
+
+/* Media Queries para Responsividade */
+
+/* Telas pequenas (smartphones) */
+@media (max-width: 768px) {
+    /* Header */
+    header {
+        padding: 10px 0;
+    }
+
+    /* Navegação */
+    nav ul li {
+        display: block; /* Exibe os itens em bloco */
+        margin: 10px 0;
+    }
+
+    /* Botão de Área do Paciente */
+    .patient-area-button {
+        position: static; /* Remove o posicionamento absoluto */
+        margin-top: 10px;
+    }
+
+    /* Hero Section */
+    .hero-content {
+        flex-direction: column; /* Coloca o texto e a imagem em coluna */
+        gap: 20px;
+    }
+
+    .hero-text {
+        order: 1; /* Coloca o texto acima da imagem */
+    }
+
+    .hero-image {
+        order: 2;
+    }
+
+    .hero-image img {
+        max-width: 100%; /* Faz a imagem ocupar a largura total */
+    }
+
+    /* Seção Sobre */
+    .about-content {
+        flex-direction: column;
+        gap: 20px;
+    }
+
+    .about-image img {
+        max-width: 100%;
+    }
+
+    /* Formulários */
+    form {
+        padding: 10px;
+    }
+
+    /* Tabelas */
+    table {
+        width: 100%;
+    }
+
+    /* Botões */
+    .Btn {
+        width: 100%;
+        margin-bottom: 10px;
+    }
+
+    /* Seção de Contato */
+    .contact-info, .contact-form {
+        padding: 10px;
+    }
+
+    /* Seção de Artigos */
+    .articles {
+        padding: 10px;
+    }
+
+    /* Seção de Área do Paciente */
+    .patient-area {
+        padding: 10px;
+    }
+
+    /* Seção de Redefinição de Senha */
+    .password-reset {
+        padding: 10px;
+    }
+}
+
+/* Telas médias (tablets) */
+@media (min-width: 769px) and (max-width: 1024px) {
+    /* Hero Section */
+    .hero-content {
+        gap: 30px;
+    }
+
+    .hero-text {
+        padding: 15px;
+    }
+
+    .hero-image img {
+        max-width: 80%;
+    }
+
+    /* Seção Sobre */
+    .about-content {
+        gap: 30px;
+    }
+
+    .about-image img {
+        max-width: 80%;
+    }
+
+    /* Formulários */
+    form {
+        max-width: 90%;
+    }
+
+    /* Tabelas */
+    table {
+        width: 90%;
+    }
+
+    /* Seção de Contato */
+    .contact-info, .contact-form {
+        max-width: 90%;
+    }
+
+    /* Seção de Artigos */
+    .articles {
+        max-width: 90%;
+    }
+
+    /* Seção de Área do Paciente */
+    .patient-area {
+        max-width: 90%;
+    }
+
+    /* Seção de Redefinição de Senha */
+    .password-reset {
+        max-width: 90%;
+    }
+}

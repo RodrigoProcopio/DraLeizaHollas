@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="en-US">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Publications - Dr. Leiza Hollas</title>
+    <link rel="stylesheet" href="styles/main.css">
+    <!-- Add Font Awesome for icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+    <header>
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="publications.html">Publications</a></li>
+                <li><a href="patient-area.html">Patient Area</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+        </nav>
+        <div class="language-selector">
+            <button class="language-button" aria-label="Select language" onclick="toggleDropdown()">
+                <span id="language-label">Language</span> <!-- Dynamic text -->
+                <span>▼</span> <!-- Arrow icon -->
+            </button>
+            <div class="language-dropdown">
+                <a href="index.html" data-lang="pt">🇧🇷 Portuguese</a>
+                <a href="index-en.html" data-lang="en">🇺🇸 English</a>
+            </div>
+        </div>
+        <div class="patient-area-button">
+            <a href="patient-area.html" class="cta-button">Access Patient Area</a>
+        </div>
+    </header>
+
+    <!-- Image Slider Section -->
+    <section class="image-slider">
+        <div class="slider-container">
+            <div class="slider">
+                <a href="https://thevalveclub.com.br/david-e-yacoub/" target="_blank"><img src="images/thevalve1.png" alt="The Valve 1"></a>
+                <a href="https://thevalveclub.com.br/valva-mitral/" target="_blank"><img src="images/thevalve2.png" alt="The Valve 2"></a>
+                <a href="https://thevalveclub.com.br/when-the-goats-go-wrong/" target="_blank"><img src="images/thevalve3.png" alt="The Valve 3"></a>
+                <a href="https://thevalveclub.com.br/the-forgotten-valve/" target="_blank"><img src="images/thevalve4.png" alt="The Valve 4"></a>
+                <a href="https://thevalveclub.com.br/intervencao-na-cardiopatia-estrutural/" target="_blank"><img src="images/thevalve5.png" alt="The Valve 5"></a>
+                <a href="https://atenaeditora.com.br/catalogo/ebook/manual-basico-de-cirurgia-toracica-e-cardiovascular-da-lactcv" target="_blank"><img src="images/book1.png" alt="Book 1"></a>
+            </div>
+        </div>
+        <!-- Navigation buttons -->
+        <button class="prev" onclick="prevSlide()">&#10094;</button>
+        <button class="next" onclick="nextSlide()">&#10095;</button>
+    </section>
+
+    <!-- Articles and Publications Section -->
+    <section class="articles">
+        <h1>Articles and Publications</h1>
+
+        <!-- Article 1 -->
+        <article class="article-card">
+            <header>
+                <h2>Basic Manual of Thoracic and Cardiovascular Surgery by LACTCV</h2>
+                <p class="publication-date">Published on October 24, 2023.</p>
+            </header>
+            <div class="article-content">
+                <p>The goal is to provide basic knowledge of thoracic and cardiovascular surgery, especially for medical students, in a didactic manner.</p>
+                <p>Within the pages of the "Basic Manual of Thoracic and Cardiovascular Surgery by LACTCV," you will embark on a journey to deepen your understanding of the fundamental principles of thoracic and cardiovascular surgery.</p>
+                <p>We hope you enjoy this reading and consider this book as one of the first steps in the continuous pursuit of excellence that surgery demands through precision and dedication.</p>
+            </div>
+            <footer>
+                <a href="https://atenaeditora.com.br/catalogo/ebook/manual-basico-de-cirurgia-toracica-e-cardiovascular-da-lactcv" target="_blank" class="read-more">
+                    <span>Read more</span>
+                    <i class="fas fa-arrow-right"></i> <!-- Font Awesome icon -->
+                </a>
+            </footer>
+        </article>
+
+        <!-- Article 2 -->
+        <article class="article-card">
+            <header>
+                <h2>Conventional Surgical Approach After MitraClip Failure</h2>
+                <p class="publication-date">Intervention in Structural Heart Disease</p>
+            </header>
+            <div class="article-content">
+                <p>The increasing incidence of structural valvular heart diseases accompanies the progressive aging of the population. Given the high prevalence, there is a significant interest in the medical community for interventional strategies—both conventional surgical and minimally invasive (transcatheter) approaches—that can be indicated for patients with valvular heart disease, aiming to reduce the associated morbidity and mortality.</p>
+            </div>
+            <footer>
+                <a href="https://thevalveclub.com.br/intervencao-na-cardiopatia-estrutural/" target="_blank" class="read-more">
+                    <span>Read more</span>
+                    <i class="fas fa-arrow-right"></i>
+                </a>
+            </footer>
+        </article>
+
+        <!-- Article 3 -->
+        <article class="article-card">
+            <header>
+                <h2>Relevant Publications on Mitral Valve Surgery</h2>
+                <p class="publication-date">Mitral Valve</p>
+            </header>
+            <div class="article-content">
+                <p>The mitral valve has always fascinated cardiac surgery. Its precise functionality and complex anatomy make it a significant area of interest in medical research and clinical practice.</p>
+                <p>The history of treating valvular pathologies began in 1923 at the "Peter Bent Brigham Hospital."</p>
+            </div>
+            <footer>
+                <a href="https://thevalveclub.com.br/valva-mitral/" target="_blank" class="read-more">
+                    <span>Read more</span>
+                    <i class="fas fa-arrow-right"></i>
+                </a>
+            </footer>
+        </article>
+
+        <!-- Article 4 -->
+        <article class="article-card">
+            <header>
+                <h2>The Surgeon's Perspective on Bioprosthetic Dysfunction</h2>
+                <p class="publication-date">Identifying Bioprosthetic Dysfunction</p>
+            </header>
+            <div class="article-content">
+                <p>The increasing incidence of structural valvular heart diseases accompanies the progressive aging of the population. Given the high prevalence of rheumatic fever, with consequent involvement of young patients, the demand for valvular intervention is directly impacted.</p>
+            </div>
+            <footer>
+                <a href="https://thevalveclub.com.br/when-the-goats-go-wrong/" target="_blank" class="read-more">
+                    <span>Read more</span>
+                    <i class="fas fa-arrow-right"></i>
+                </a>
+            </footer>
+        </article>
+        
+        <!-- Article 5 -->
+        <article class="article-card">
+            <header>
+                <h2>Valve-Sparing Techniques in Aortic Aneurysm</h2>
+                <p class="publication-date">Duel to Tame Aortic Aneurysms</p>
+            </header>
+            <div class="article-content">
+                <p>In 1900, Dr. William Osler already pointed out a truth in medicine: "There is no disease more conducive to clinical humility than aortic aneurysms." Osler's statement is accurate, as even today, aortic diseases remain a clinical-surgical challenge for the medical field.</p>
+            </div>
+            <footer>
+                <a href="https://thevalveclub.com.br/david-e-yacoub/" target="_blank" class="read-more">
+                    <span>Read more</span>
+                    <i class="fas fa-arrow-right"></i>
+                </a>
+            </footer>
+        </article>
+        
+        <!-- Article 6 -->
+        <article class="article-card">
+            <header>
+                <h2>The Surgeon's Perspective on Tricuspid Valve Disease</h2>
+                <p class="publication-date">Tricuspid Valve Disease</p>
+            </header>
+            <div class="article-content">
+                <p>Intervention in tricuspid valve disease is clearly indicated when it occurs concomitantly with the indication for intervention in mitral and aortic valve diseases. When present in isolation, the indication for intervention remains controversial among surgeons and cardiologists, with a higher prevalence in the presence of valvular stenosis.</p>
+            </div>
+            <footer>
+                <a href="https://thevalveclub.com.br/the-forgotten-valve/" target="_blank" class="read-more">
+                    <span>Read more</span>
+                    <i class="fas fa-arrow-right"></i>
+                </a>
+            </footer>
+        </article>
+        
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <p>&copy; 2025 Procorp Technology Ltd. All rights reserved.</p>
+    </footer>
+
+    <script src="scripts/main.js"></script>
+</body>
+</html>

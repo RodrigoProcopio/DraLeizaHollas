@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Agenda de Consultas - Sistema de Gerenciamento</title>
+    <link rel="stylesheet" href="styles/main.css">
+</head>
+<body>
+    <header>
+        <nav>
+            <ul>
+                <li><a href="index.html" id="homeLink">Home</a></li>
+                <li><a href="medicamentos.html" id="medicamentoLink">Medicamentos</a></li>
+                <li><a href="agenda.html" id="agendaLink">Agenda de Consultas</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section class="container">
+            <h2 class="centered-text">Aqui você pode gerenciar suas consultas.</h2>
+            <div class="newConsult">
+                <input type="text" id="newDoctor_name" placeholder="Médico(a)">
+                <input type="text" id="newSpclty" placeholder="Especialidade">
+                <input type="date" id="newDate">
+                <input type="time" id="newTime">
+                <button class="Btn" onclick="newConsult()">Agendar Consulta</button>
+            </div>
+            <div id="editForm" class="editConsult" style="display: none;">
+                <input type="text" id="editId" placeholder="Id">
+                <input type="text" id="IdGoogle" placeholder="IdGoogle">
+                <input type="text" id="eTagGoogle" placeholder="eTagGoogle">
+                <input type="text" id="editDoctor_name" placeholder="Médico(a)">
+                <input type="text" id="editSpclty" placeholder="Especialidade">
+                <input type="date" id="editDate">
+                <input type="time" id="editTime">
+                <button class="Btn" onclick="updateConsult()">Atualizar Consulta</button>
+                <button class="Btn">Cancelar Edição</button>
+            </div>
+            <table id="consultTable">
+                <thead>
+                    <tr>
+                        <th>Id</th>
+                        <th>Médico(a)</th>
+                        <th>Especialidade</th>
+                        <th>Data</th>
+                        <th>Hora</th>
+                        <th>Editar</th>
+                        <th>Excluir</th>
+                        <th>Google Agenda</th>
+                    </tr>
+                </thead>
+                <tbody>
+                </tbody>
+            </table>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2025 Procorp Tecnologia Ltda. Todos os direitos reservados.</p>
+    </footer>
+    
+    <script src="scripts/scripts.js"></script>
+</body>
+</html>

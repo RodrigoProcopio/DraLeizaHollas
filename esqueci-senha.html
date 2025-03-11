@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dra. Leiza Hollas - Cirurgia Cardiovascular</title>
+    <link rel="stylesheet" href="styles/main.css">
+</head>
+<body>
+    <header>
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="sobre.html">Sobre</a></li>
+                <li><a href="publicacoes.html">Publicações</a></li>
+                <li><a href="area-paciente.html">Área do Paciente</a></li>
+                <li><a href="contato.html">Contato</a></li>
+            </ul>
+        </nav>
+        <div class="language-selector">
+            <button class="language-button" aria-label="Selecionar idioma" onclick="toggleDropdown()">
+                <span id="language-label">Language</span> <!-- Texto dinâmico -->
+                <span>▼</span> <!-- Ícone de seta -->
+            </button>
+            <div class="language-dropdown">
+                <a href="index.html" data-lang="pt">🇧🇷 Português</a>
+                <a href="index-en.html" data-lang="en">🇺🇸 English</a>
+            </div>
+        </div>
+        <div class="patient-area-button">
+            <a href="area-paciente.html" class="cta-button">Acessar Área do Paciente</a>
+        </div>
+    </header>
+
+    
+    <section class="password-reset">
+        <h1>Recuperação de Senha</h1>
+        <p>Digite seu e-mail para receber um link de redefinição.</p>
+        <form id="resetPasswordForm" onsubmit="resetPassword(event)">
+            <input type="email" id="email" placeholder="Digite seu e-mail" required>
+            <button type="submit">Enviar Link de Redefinição</button>
+        </form>
+        <p id="message"></p>
+    </section>
+    
+    <footer>
+        <p>&copy; 2025 Procorp Tecnologia Ltda. Todos os direitos reservados.</p>
+    </footer>
+    
+</body>
+</html>

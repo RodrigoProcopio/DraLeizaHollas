@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Área do Paciente - Dra. Nome da Médica</title>
+    <link rel="stylesheet" href="styles/main.css">
+    <script src="https://cdn.auth0.com/js/auth0/9.16/auth0.min.js"></script>
+</head>
+<body>
+    <header>
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="sobre.html">Sobre</a></li>
+                <li><a href="publicacoes.html">Publicações</a></li>
+                <li><a href="area-paciente.html">Área do Paciente</a></li>
+                <li><a href="contato.html">Contato</a></li>
+            </ul>
+        </nav>
+        <div class="language-selector">
+            <button class="language-button" aria-label="Selecionar idioma" onclick="toggleDropdown()">
+                <span id="language-label">Language</span> <!-- Texto dinâmico -->
+                <span>▼</span> <!-- Ícone de seta -->
+            </button>
+            <div class="language-dropdown">
+                <a href="index.html" data-lang="pt">🇧🇷 Português</a>
+                <a href="index-en.html" data-lang="en">🇺🇸 English</a>
+            </div>
+        </div>
+        <div class="patient-area-button">
+            <a href="area-paciente.html" class="cta-button">Acessar Área do Paciente</a>
+        </div>
+    </header>
+
+    <section class="patient-area">
+        <h1>Área do Paciente</h1>
+        <p>Acesse seu prontuário, agende consultas e veja seus exames.</p>
+        <form id="loginForm" onsubmit="login(event)">
+            <input type="text" id="username" placeholder="Usuário" required>
+            <input type="password" id="password" placeholder="Senha" required>
+            <button type="submit">Entrar</button>
+            <a href="esqueci-senha.html" class="forgot-password">Esqueci minha senha</a>
+        </form>
+    </section>
+
+    <footer>
+        <p>&copy; 2025 Procorp Tecnologia Ltda. Todos os direitos reservados.</p>
+    </footer>
+
+    <script src="scripts/main.js"></script>
+
+    <script>
+        // Substitua com as suas credenciais Auth0
+        const auth0ClientId = 'YOUR_CLIENT_ID'; // Seu client ID do Auth0
+        const auth0Domain = 'YOUR_AUTH0_DOMAIN'; // Exemplo: your-app.auth0.com
+        let auth0 = null;
+
+        // Inicializar Auth0
+        window.onload = async () => {
+            auth0 = await createAuth0Client({
+                domain: auth0Domain,
+                client_id: auth0ClientId,
+                redirect_uri: window.location.href
+            });
+
+            // Verifica se já está autenticado
+            const isAuthenticated = await auth0.isAuthenticated();
+            if (isAuthenticated) {
+                // Se já estiver autenticado, redirecionar ou exibir o conteúdo da área do paciente
+                window.location.href = 'area-paciente.html';
+            }
+        };
+
+        // Função para login
+        async function login(event) {
+            event.preventDefault();
+            
+            const username = document.getElementById('username').value;
+            const password = document.getElementById('password').value;
+
+            try {
+                // Chama o login via Auth0
+                await auth0.loginWithRedirect({
+                    redirect_uri: window.location.href,
+                    username: username,
+                    password: password
+                });
+            } catch (error) {
+                console.error("Erro no login:", error);
+                alert("Erro ao tentar fazer login. Verifique suas credenciais.");
+            }
+        }
+
+        // Função para logout
+        async function logout() {
+            await auth0.logout({
+                returnTo: window.location.href
+            });
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Publicações - Dra. Leiza Hollas</title>
+    <link rel="stylesheet" href="styles/main.css">
+    <!-- Adicione Font Awesome para ícones -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+    <header>
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="sobre.html">Sobre</a></li>
+                <li><a href="publicacoes.html">Publicações</a></li>
+                <li><a href="area-paciente.html">Área do Paciente</a></li>
+                <li><a href="contato.html">Contato</a></li>
+            </ul>
+        </nav>
+        <div class="language-selector">
+            <button class="language-button" aria-label="Selecionar idioma" onclick="toggleDropdown()">
+                <span id="language-label">Language</span> <!-- Texto dinâmico -->
+                <span>▼</span> <!-- Ícone de seta -->
+            </button>
+            <div class="language-dropdown">
+                <a href="index.html" data-lang="pt">🇧🇷 Português</a>
+                <a href="index-en.html" data-lang="en">🇺🇸 English</a>
+            </div>
+        </div>
+        <div class="patient-area-button">
+            <a href="area-paciente.html" class="cta-button">Acessar Área do Paciente</a>
+        </div>
+    </header>
+
+    <!-- Seção do Carrossel de Imagens -->
+    <section class="image-slider">
+        <div class="slider-container">
+            <div class="slider">
+                <a href="https://thevalveclub.com.br/david-e-yacoub/" target="_blank"><img src="images/thevalve1.png" alt="The Valve 1"></a>
+                <a href="https://thevalveclub.com.br/valva-mitral/" target="_blank"><img src="images/thevalve2.png" alt="The Valve 2"></a>
+                <a href="https://thevalveclub.com.br/when-the-goats-go-wrong/" target="_blank"><img src="images/thevalve3.png" alt="The Valve 3"></a>
+                <a href="https://thevalveclub.com.br/the-forgotten-valve/" target="_blank"><img src="images/thevalve4.png" alt="The Valve 4"></a>
+                <a href="https://thevalveclub.com.br/intervencao-na-cardiopatia-estrutural/" target="_blank"><img src="images/thevalve5.png" alt="The Valve 5"></a>
+                <a href="https://atenaeditora.com.br/catalogo/ebook/manual-basico-de-cirurgia-toracica-e-cardiovascular-da-lactcv" target="_blank"><img src="images/livro1.png" alt="Livro 1"></a>
+            </div>
+        </div>
+        <!-- Botões de navegação -->
+        <button class="prev" onclick="prevSlide()">&#10094;</button>
+        <button class="next" onclick="nextSlide()">&#10095;</button>
+    </section>
+
+    <!-- Seção de Artigos e Publicações -->
+    <section class="articles">
+        <h1>Artigos e Publicações</h1>
+
+        <!-- Artigo 1 -->
+        <article class="article-card">
+            <header>
+                <h2>Manual básico de cirurgia torácica e cardiovascular da LACTCV</h2>
+                <p class="publication-date">Publicado em 24 de outubro de 2023.</p>
+            </header>
+            <div class="article-content">
+                <p>A proposta é trazer um conhecimento básico da cirurgia torácica e cardiovascular principalmente para acadêmicos de medicina de forma didática.</p>
+                <p>Nas páginas do “Manual Básico de Cirurgia Torácica e Cardiovascular da LACTCV”, você iniciará uma jornada de aprofundamento nos princípios básicos e essenciais da cirurgia torácica e cardiovascular.</p>
+                <p>Esperamos que você desfrute desta leitura e considere este livro como um dos primeiros passos para a busca contínua pela excelência que a cirurgia exige através da precisão e dedicação.</p>
+            </div>
+            <footer>
+                <a href="https://atenaeditora.com.br/catalogo/ebook/manual-basico-de-cirurgia-toracica-e-cardiovascular-da-lactcv" target="_blank" class="read-more">
+                    <span>Leia mais</span>
+                    <i class="fas fa-arrow-right"></i> <!-- Ícone do Font Awesome -->
+                </a>
+            </footer>
+        </article>
+
+        <!-- Artigo 2 -->
+        <article class="article-card">
+            <header>
+                <h2>Abordagem cirúrgica convencional após uma falha do MitraClip</h2>
+                <p class="publication-date">Intervenção na Cardiopatia Estrutural</p>
+            </header>
+            <div class="article-content">
+                <p>O aumento da incidência de cardiopatias estruturais valvares acompanha o progressivo envelhecimento da população e, dada a alta prevalência, hoje há grande anseio do meio médico pela busca de estratégias intervencionistas – tanto cirúrgicas convencionais quanto às minimamente invasivas (transcateter) – que podem ser indicadas para pacientes portadores de valvopatia cardíaca, objetivando a redução da morbimortalidade associada a esta doença.</p>
+            </div>
+            <footer>
+                <a href="https://thevalveclub.com.br/intervencao-na-cardiopatia-estrutural/" target="_blank" class="read-more">
+                    <span>Leia mais</span>
+                    <i class="fas fa-arrow-right"></i>
+                </a>
+            </footer>
+        </article>
+
+        <!-- Artigo 3 -->
+        <article class="article-card">
+            <header>
+                <h2>Publicações relevantes sobre cirurgia da valva mitral</h2>
+                <p class="publication-date">Valva Mitral</p>
+            </header>
+            <div class="article-content">
+                <p>A valva mitral sempre despertou fascínio na cirurgia cardíaca. Sua funcionalidade precisa e anatomia complexa fazem dela uma área de interesse significativo na pesquisa médica e na prática clínica.</p>
+                <p>A história do tratamento das patologias valvares tem início em 1923, no “Peter Bent Brigham Hospital”.</p>
+            </div>
+            <footer>
+                <a href="https://thevalveclub.com.br/valva-mitral/" target="_blank" class="read-more">
+                    <span>Leia mais</span>
+                    <i class="fas fa-arrow-right"></i>
+                </a>
+            </footer>
+        </article>
+
+        <!-- Artigo 4 -->
+        <article class="article-card">
+            <header>
+                <h2>A visão do cirurgião na disfunção de próteses biológicas</h2>
+                <p class="publication-date">Identificando disfunção de biopróteses</p>
+            </header>
+            <div class="article-content">
+                <p>O aumento da incidência de cardiopatias estruturais valvares acompanha o progressivo envelhecimento da população e, dada a alta prevalência de febre reumática, com consequente acometimento de pacientes jovens, a demanda por intervenção valvar é diretamente impactada.</p>
+            </div>
+            <footer>
+                <a href="https://thevalveclub.com.br/when-the-goats-go-wrong/" target="_blank" class="read-more">
+                    <span>Leia mais</span>
+                    <i class="fas fa-arrow-right"></i>
+                </a>
+            </footer>
+        </article>
+        
+        <!-- Artigo 5 -->
+        <article class="article-card">
+            <header>
+                <h2>Técnicas de valve-sparing no aneurisma de aorta</h2>
+                <p class="publication-date">Duelo para Domar Aneurismas de Aorta</p>
+            </header>
+            <div class="article-content">
+                <p>Em 1900 o Dr Willian Osler já apontava uma verdade na medicina: “não há doença mais propícia à humildade clínica do que aneurismas da aorta”. A afirmação de Osler é verídica, visto que até hoje, as doenças da aorta são um desafio clínico-cirúrgico para a área médica.</p>
+            </div>
+            <footer>
+                <a href="https://thevalveclub.com.br/david-e-yacoub/" target="_blank" class="read-more">
+                    <span>Leia mais</span>
+                    <i class="fas fa-arrow-right"></i>
+                </a>
+            </footer>
+        </article>
+        
+        <!-- Artigo 6 -->
+        <article class="article-card">
+            <header>
+                <h2>A visão do cirurgião na Valvopatia tricúspide</h2>
+                <p class="publication-date">A valvopatia tricúspide</p>
+            </header>
+            <div class="article-content">
+                <p>A intervenção na valvopatia tricúspide tem sua clara indicação quando ocorre concomitantemente à indicação de intervenção das valvopatias mitral e aórtica. Quando presente de maneira isolada, a indicação de intervenção ainda é motivo de controvérsias entre cirurgiões e cardiologistas, com mais prevalência na presença da estenose valvar.</p>
+            </div>
+            <footer>
+                <a href="https://thevalveclub.com.br/the-forgotten-valve/" target="_blank" class="read-more">
+                    <span>Leia mais</span>
+                    <i class="fas fa-arrow-right"></i>
+                </a>
+            </footer>
+        </article>
+        
+    </section>
+
+    <!-- Rodapé -->
+    <footer>
+        <p>&copy; 2025 Procorp Tecnologia Ltda. Todos os direitos reservados.</p>
+    </footer>
+
+    <script src="scripts/main.js"></script>
+</body>
+</html>

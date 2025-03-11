@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Medicamentos - Sistema de Gerenciamento</title>
+    <link rel="stylesheet" href="styles/main.css">
+</head>
+<body>
+    <header>
+        <nav>
+            <ul>
+                <li><a href="index.html" id="homeLink">Home</a></li>
+                <li><a href="medicamentos.html" id="medicamentoLink">Medicamentos</a></li>
+                <li><a href="agenda.html" id="agendaLink">Agenda de Consultas</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section class="container">
+            <h2 class="centered-text">Aqui você pode cadastrar, pesquisar e excluir seus medicamentos.</h2>
+            <div class="intButtons">
+                <button class="Btn" onclick="toggleList()">Atualizar Lista</button>
+                <button class="Btn" onclick="toggleSearchBox()">Pesquisar Medicamento</button>
+                <button class="Btn" onclick="toggleInsertMedicine()">Inserir Medicamento</button>
+            </div>
+            <div id="searchBox" style="display: none;">
+                <input type="text" id="srchMedicine" placeholder="Buscar medicamento">
+                <button onclick="searchMedicine()" class="Btn">Buscar</button>
+            </div>
+            <div class="newItem" style="display: none;">
+                <input type="text" id="newMedicine" placeholder="Medicamento">
+                <input type="text" id="newPosology" placeholder="Posologia">
+                <input type="text" id="newDoctor" placeholder="Médico(a)">
+                <input type="text" id="newSpecialty" placeholder="Especialidade">
+                <button onclick="newItem()" class="Btn">Inserir</button>
+            </div>
+            <table id="myTable">
+                <tr>
+                    <th>Medicamento</th>
+                    <th>Posologia</th>
+                    <th>Médico(a)</th>
+                    <th>Especialidade</th>
+                    <th>Excluir</th>
+                </tr>
+            </table>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2025 Procorp Tecnologia Ltda. Todos os direitos reservados.</p>
+    </footer>
+    
+    <script src="scripts/scripts.js"></script>
+</body>
+</html>

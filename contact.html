@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en-US">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact - Dr. Leiza Hollas</title>
+    <link rel="stylesheet" href="styles/main.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+    <header>
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="publications.html">Publications</a></li>
+                <li><a href="patient-area.html">Patient Area</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+        </nav>
+        <div class="language-selector">
+            <button class="language-button" aria-label="Select language" onclick="toggleDropdown()">
+                <span id="language-label">Language</span> <!-- Dynamic text -->
+                <span>▼</span> <!-- Arrow icon -->
+            </button>
+            <div class="language-dropdown">
+                <a href="index.html" data-lang="pt">🇧🇷 Portuguese</a>
+                <a href="index-en.html" data-lang="en">🇺🇸 English</a>
+            </div>
+        </div>
+        <div class="patient-area-button">
+            <a href="patient-area.html" class="cta-button">Access Patient Area</a>
+        </div>
+    </header>
+
+    <section class="contact">
+        <h1>Contact</h1>
+        <p>Get in touch to schedule an appointment or ask questions.</p>
+
+        <!-- Appointment Information -->
+        <div class="contact-info">
+            <h2>Appointment Scheduling</h2>
+            <p><i class="fas fa-phone"></i> Phone: <a href="tel:+554130166622">(41) 3016-6622</a></p>
+            <p><i class="fas fa-hospital"></i> Brazilian Red Cross Hospital - Paraná</p>
+            <p><i class="fas fa-map-marker-alt"></i> Address: Av. Vicente Machado, 1280, R. Cap. Souza Franco, 50 - Batel, Curitiba - PR, 80420-011</p>
+        </div>
+
+        <!-- Contact Form -->
+        <div class="contact-form">
+            <h2>Send a Message</h2>
+            <div id="feedbackMessage" style="display: none; margin-top: 20px; padding: 10px; border-radius: 5px;"></div>
+            <form id="contactForm">
+                <div class="form-group">
+                    <input type="text" id="name" placeholder="Name" required>
+                </div>
+                <div class="form-group">
+                    <input type="email" id="email" placeholder="Email" required>
+                </div>
+                <div class="form-group">
+                    <textarea id="message" placeholder="Message" required></textarea>
+                </div>
+                <button type="submit">Send</button>
+            </form>
+            <div id="feedbackMessage" style="display: none; margin-top: 20px; padding: 10px; border-radius: 5px;"></div>
+        </div>
+    </section>
+
+    <footer>
+        <p>&copy; 2025 Procorp Technology Ltd. All rights reserved.</p>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
+    <script src="scripts/main.js"></script>
+</body>
+</html>

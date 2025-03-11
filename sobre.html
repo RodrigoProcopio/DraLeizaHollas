@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sobre - Dra. Leiza Hollas</title>
+    <link rel="stylesheet" href="styles/main.css">
+</head>
+<body>
+    <header>
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="sobre.html">Sobre</a></li>
+                <li><a href="publicacoes.html">Publicações</a></li>
+                <li><a href="area-paciente.html">Área do Paciente</a></li>
+                <li><a href="contato.html">Contato</a></li>
+            </ul>
+        </nav>
+        <div class="language-selector">
+            <button class="language-button" aria-label="Selecionar idioma" onclick="toggleDropdown()">
+                <span id="language-label">Language</span> <!-- Texto dinâmico -->
+                <span>▼</span> <!-- Ícone de seta -->
+            </button>
+            <div class="language-dropdown">
+                <a href="index.html" data-lang="pt">🇧🇷 Português</a>
+                <a href="index-en.html" data-lang="en">🇺🇸 English</a>
+            </div>
+        </div>
+        <div class="patient-area-button">
+            <a href="area-paciente.html" class="cta-button">Acessar Área do Paciente</a>
+        </div>
+    </header>
+
+    <section class="about">
+        <div class="about-content">
+            <div class="about-text">
+                <div class="text-box">
+                    <h1>Dra. Leiza Loiane Hollas</h1>
+                    <h2>Especialista em Cirurgia Cardiovascular</h2>
+                    <p>
+                        Médica pela Pontifícia Universidade Católica do Paraná (2018). 
+                    </p>
+                    <p>
+                        Residência médica concluída em Cirurgia Cardiovascular no Hospital da Cruz Vermelha Brasileira - Paraná. Atuando principalmente nos seguintes temas: cirurgia cardiovascular, simulação cirúrgica e cirurgia valvar.
+                    </p>
+                    <p>
+                        Pesquisadora científica, com artigos publicados em periódicos e revistas científicas brasileiras.
+                    </p>
+                    <p>
+                        Membro do The Valve Club, que tem como objetivo a disseminação de conhecimento e ciência através de postagens de artigos relacionados a Valvopatias e Cardiopatia Estrutural, área de interesse crescente na Cardiologia.
+                    </p>
+                </div>
+            </div>
+            <div class="about-image">
+                <img src="images/sobre.jpg" alt="Dra. Leiza Hollas">
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <p>&copy; 2025 Procorp Tecnologia Ltda. Todos os direitos reservados.</p>
+    </footer>
+
+    <script src="scripts/main.js"></script>
+</body>
+</html>
