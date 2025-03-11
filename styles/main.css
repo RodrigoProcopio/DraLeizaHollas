@@ -1050,34 +1050,4 @@ input::placeholder {
 }
 
 /* Responsividade */
-@media (max-width: 600px) {
-    #searchBox,
-    .newItem {
-        flex-direction: column;
-    }
-
-    input,
-    .Btn {
-        width: 100%;
-    }
-}
-
-.centered-text {
-    font-size: 1.5em;
-    text-align: center; /* Centraliza o texto horizontalmente */
-    color: #004D40;
-    max-width: 800px;
-    margin: 0 auto;
-    padding: 20px;
-    background: rgba(255, 255, 255, 0.5); /* Fundo branco com transparência */
-    border-radius: 10px; /* Bordas arredondadas */
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Sombra suave */
-    margin-bottom: 20px;
-    margin-top: 20px;
-    background-image: url('../images/heart.png'); /* Imagem de fundo */
-    background-size: 70% auto; /* 30% da largura do elemento, altura automática */
-    background-position: center; /* Posiciona à direita e centralizada verticalmente */
-    background-repeat: no-repeat; /* Evita repetição */
-    background-blend-mode: overlay; /* Combina a imagem com o fundo */
-}
 
