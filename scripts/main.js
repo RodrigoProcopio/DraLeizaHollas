@@ -251,3 +251,8 @@ window.onload = async () => {
         client_id: auth0ClientId
     });
 };
+
+function toggleMenu() {
+    const mobileNav = document.querySelector('.mobile-nav');
+    mobileNav.classList.toggle('active');
+}
