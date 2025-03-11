@@ -1313,8 +1313,3 @@ const updateGoogleCalendarEvent = async () => {
     alert('Erro ao atualizar o evento no Google Calendar.');
   }
 };
-
-function toggleMenu() {
-    const mobileNav = document.querySelector('.mobile-nav');
-    mobileNav.classList.toggle('active');
-}
