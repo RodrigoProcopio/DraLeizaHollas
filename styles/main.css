@@ -1222,3 +1222,49 @@ input::placeholder {
         max-width: 90%;
     }
 }
+
+/* Estilo para o ícone de menu hambúrguer */
+.menu-icon {
+    display: none; /* Oculta o ícone por padrão */
+    font-size: 24px;
+    cursor: pointer;
+    color: #fff;
+    padding: 10px;
+}
+
+/* Estilo para o menu móvel */
+.mobile-nav {
+    display: none; /* Oculta o menu por padrão */
+    background: rgba(0, 77, 64, 0.9); /* Fundo semitransparente */
+    position: absolute;
+    top: 60px; /* Ajuste conforme a altura do cabeçalho */
+    left: 0;
+    width: 100%;
+    z-index: 1000;
+}
+
+.mobile-nav ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.mobile-nav ul li {
+    display: block; /* Exibe os itens em bloco */
+    text-align: center;
+    margin: 0;
+}
+
+.mobile-nav ul li a {
+    display: block;
+    padding: 15px;
+    color: #fff;
+    text-decoration: none;
+    font-size: 1.2em;
+    transition: background 0.3s ease;
+}
+
+.mobile-nav ul li a:hover {
+    background: rgba(255, 255, 255, 0.1); /* Efeito de hover */
+}
+
